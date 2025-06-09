@@ -1,4 +1,3 @@
-// src/pages/LoginRegister.tsx
 import React, { useState, FormEvent } from 'react';
 
 export interface UserFormData {
@@ -38,7 +37,7 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({ onLogin }) => {
 
   const validateForm = (isRegister: boolean) => {
     if (isRegister) {
-      if (!formData.email.includes('@')) {
+      if (!/^[^s@]+@[^s@]+\.[^s@]+$/.test(formData.email)) {
         setError('لطفاً یک ایمیل معتبر وارد کنید');
         return false;
       }
@@ -80,17 +79,25 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({ onLogin }) => {
 
   return (
     <div
-      style={{ height: '100vh', width: '100vw' }}
-      className="d-flex align-items-center justify-content-center bg-light"
+      style={{
+        minHeight: '100vh',
+        width: '100vw',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#f0f2f5',
+        padding: '2rem',
+        overflowY: 'auto'
+      }}
     >
-      <div className="card shadow-sm" style={{ width: 400 }}>
+      <div className="card shadow-sm" style={{ width: '100%', maxWidth: 420 }}>
         <div className="card-body p-4">
           <h3 className="card-title text-center mb-4">
             {showRegister ? 'ثبت‌نام' : 'ورود'}
           </h3>
 
           {error && (
-            <div className="alert alert-danger py-2">
+            <div className="alert alert-danger py-2 text-center">
               {error}
             </div>
           )}

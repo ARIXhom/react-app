@@ -1,10 +1,19 @@
 /* global.css */
 
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  direction: rtl;
+}
+
 body {
   margin: 0;
   font-family: 'Vazirmatn', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f6fa;
   direction: rtl;
+  text-align: right;
 }
 
 * {
@@ -262,4 +271,8 @@ select {
 
 .d-flex[style] {
   width: 100vw;
+}
+
+.bg-light-blue {
+  background-color: #b3e5fc !important;
 }
