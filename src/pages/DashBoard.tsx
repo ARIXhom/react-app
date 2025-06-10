@@ -32,7 +32,7 @@ const Dashboard: React.FC = () => {
         <Link className="nav-link py-2 text-dark" to="/manage-resources">مدیریت منابع</Link>
         <Link className="nav-link py-2 text-dark" to="/generate-questions">طراحی سؤالات</Link>
         <Link className="nav-link py-2 text-dark" to="/question-bank">بانک سؤالات</Link>
-        <Link className="nav-link py-2 text-dark" to="#">برگزاری آزمون</Link>
+        <Link className="nav-link py-2 text-dark" to="/take-exam">برگزاری آزمون</Link>
         <Link className="nav-link py-2 text-dark" to="/profile">پروفایل / تنظیمات</Link>
       </div>
 

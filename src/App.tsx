@@ -8,6 +8,9 @@ import ManageResources from './pages/ManageResources';
 import GenerateQuestions from './pages/GenerateQuestions';
 import QuestionBank from './pages/QuestionBank';
 import Profile from './pages/Profile';
+import TakeExam from './pages/TakeExam';
+import DoExam from './pages/DoExam';
+import ManageExam from './pages/ManageExam';
 
 
 const App: React.FC = () => {
@@ -32,6 +35,9 @@ const App: React.FC = () => {
       <Route path="/generate-questions" element={<GenerateQuestions />} />
       <Route path="/question-bank" element={<QuestionBank />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/take-exam" element={<TakeExam />} />
+      <Route path="/do-exam/:id" element={<DoExam />} />
+      <Route path="/manage-exam" element={<ManageExam />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
